@@ -18,14 +18,13 @@ vcapitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia', 'West Virginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
    #generate 35 quiz files
-
-   for quizNum in range(35):
+for quizNum in range(35):
       quizFile = open ('/Users/bentolima/Documents/Projects/ATHS/capitalQuiz%s.txt' % (quizNum +1) , 'w')
-      answerfile = open ('/Users/bentolima/Documents/Projects/ATHS/capital_answer%s' % (quiznum+1) , 'w')
+      answerfile = open ('/Users/bentolima/Documents/Projects/ATHS/capital_answer%s' % (quizNum+1) , 'w')
 
       quizFile.write('Name: \n\n Date: \n\n')   
-      quizFile.write((' '*20)+'quizFile number %d' %(quiznum+1))
-      quizfile.write('\n\n')
+      quizFile.write((' '*20)+'quizFile number %d' %(quizNum+1))
+      quizFile.write('\n\n')
 
       states = list(vcapitals.keys())
       random.shuffle(states)
@@ -36,4 +35,17 @@ vcapitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
          del wrongAnswer[wrongAnswer.index(correctAnswer)]
          wrongAnswer = random.sample(wrongAnswer,3)
          
+         answerOptions = wrongAnswer + [correctAnswer]
+         random.shuffle(answerOptions) # randomize the order of the answers
+
+        # Write the question and answer options to the quiz file.
+         quizFile.write('%s. What is the capital of %s?\n' % (questionNum + 1, states[questionNum]))
+         for i in range(4):
+            quizFile.write('    %s. %s\n' % ('ABCD'[i], answerOptions[i]))
+         quizFile.write('\n')
+
+        # Write out the answer key to a file.
+         answerfile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
+quizFile.close()
+answerfile.close()
 

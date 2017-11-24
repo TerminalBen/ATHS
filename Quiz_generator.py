@@ -19,8 +19,8 @@ vcapitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 
    #generate 35 quiz files
 for quizNum in range(35):
-      quizFile = open ('/Users/bentolima/Documents/Projects/ATHS/capitalQuiz%s.txt' % (quizNum +1) , 'w')
-      answerfile = open ('/Users/bentolima/Documents/Projects/ATHS/capital_answer%s' % (quizNum+1) , 'w')
+      quizFile = open ('/Users/bentolima/Documents/Projects/ATHS/Quiz/capitalQuiz%s.txt' % (quizNum +1) , 'w')
+      answerfile = open ('/Users/bentolima/Documents/Projects/ATHS/Quiz/capital_answer%s' % (quizNum+1) , 'w')
 
       quizFile.write('Name: \n\n Date: \n\n')   
       quizFile.write((' '*20)+'quizFile number %d' %(quizNum+1))

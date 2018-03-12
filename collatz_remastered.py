@@ -9,11 +9,13 @@ def collatz(number):
 		return 3 * number+1
 
 print ("give me a number \n") 
+
 try:
 
 	inp = input(int)
 	while inp!= 1:
 		inp = collatz(int(inp))	
 
-except ValueError:
-	print('invalid literal for int() with base 10: 'puppy'')
+except NameError:
+	print('oops enter a valid number')
+	

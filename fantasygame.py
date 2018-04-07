@@ -1,10 +1,11 @@
+
 #dragonLoot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 
 def displayInventory(inventory):
 	totalItems = 0
 	for k,v in inventory.items():
 		totalItems+= v
-	print (inventory)	
+	print (inventory)
 	print ("total Items: " + str(totalItems))
 
 

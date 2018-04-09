@@ -1,1 +1,1 @@
-print 'pau no cu'
+print('pau no cu')

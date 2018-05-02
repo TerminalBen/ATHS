@@ -23,6 +23,7 @@ def birthday(cena):
             print('what is your birthday')
             day=str(input())
             birthdays[name] = day
+            
             print ('Database updated!!')
             print(name + ' your birthday in on ' + birthdays[name])
 
@@ -104,4 +105,3 @@ def printPicnic(itemsDict, leftWidth, rightWidth):
 picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
 printPicnic(picnicItems, 12, 5)
 ##printPicnic(picnicItems, 20, 6)
-

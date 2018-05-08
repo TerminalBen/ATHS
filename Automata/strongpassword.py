@@ -6,11 +6,19 @@ import re
 strongregex1 = re.compile(r'[a-zA-Z0-9]*[[a-zA-Z0-9]+') #takes everything
 strongregex2 = re.compile(r'[a-z]+[A-Z]+\d+') #demands order
 
+<<<<<<< HEAD
+strongalfa = re.compile(r'[A-Z]+')
+strongminor = re.compile(r'[a-z]+')
+strongdigit = re.compile(r'\d+')
+
+def chechpass(text):
+=======
 strongalfa = re.compile(r'[A-Z]+') #regex for alfa characters, For minor characters and for digits
 strongminor = re.compile(r'[a-z]+')
 strongdigit = re.compile(r'\d+')
 
 def chechpass(text):#return true if text has all of the regexes and if length is >8. to be used in assertions
+>>>>>>> a19cdc0525893dd8c8c1e036276a0aece5e504f9
     return bool (strongalfa.search(text) and strongminor.search(text) and
                     strongdigit.search(text) and len(text)>=8)
 

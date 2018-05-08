@@ -25,6 +25,9 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'West Virginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
 for quizNum in range(35):
+<<<<<<< HEAD
+    
+=======
     quizfile = open('capitalquiz%s.txt' % quiznum+1 , 'w')
     Answerfile = open ('capitalquiz_Answer%s.txt'%quizNum+1,'w')
     #header
@@ -45,3 +48,4 @@ for quizNum in range(35):
         random.shuffle(answeroptions)
 
     quizfile
+>>>>>>> a19cdc0525893dd8c8c1e036276a0aece5e504f9

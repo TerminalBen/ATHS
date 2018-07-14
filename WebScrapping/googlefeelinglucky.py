@@ -12,6 +12,7 @@ res.raise_for_status()
 #retrieve top search result links
 soup = bs4.BeautifulSoup(res.text)
 links = soup.select('.r a')
+print (len(links))
 
 #open webbrowser for each search
 numopen=min(5,len(links))

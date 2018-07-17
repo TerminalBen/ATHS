@@ -2,14 +2,14 @@
 #smart search for alibaba products
 
 import requests,webbrowser,bs4,sys
-#thing = str(sys.argv[1:])
+
 print('hold a sec...')
 res = requests.get('https://www.alibaba.com/trade/search?fsb=y&IndexArea=product_en&CatId=&SearchText='+''.join(sys.argv[1:]))
 res.raise_for_status()
 
 soup = bs4.BeautifulSoup(res.text)
 links = soup.select('h2 a')
-#print ('a coisa é:'+thing)
+
 print (len(links))
 
 numopen=min(5,len(links))

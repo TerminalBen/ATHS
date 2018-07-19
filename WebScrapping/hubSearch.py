@@ -8,10 +8,11 @@ print('Downloading page...')
 res = requests.get('https://www.xvideos.com/?k='+' '.join(sys.argv[1:]))
 res.raise_for_status()
 
-soup = BeautifulSoup(res.text)
+soup = BeautifulSoup(res.text,('html.parser'))
 links = soup.select('p > a')
 
-print(links[1].attrs)
+print(links[1])
+
 
 numopen = min(len(links),4)
 

@@ -1,18 +1,16 @@
 Trigger  = ['NOUN','ADJECTIVE','VERB']
-userinput=[]
 
+
+#read file
 file= open('teste.txt','r')
 data = file.read()
-
+#replace triggers in data for user input 
 for w in data.split():
-    if (w in Trigger):
-        #w = w.replace(input('please insert a '+w+'\n'))
-        user = input('please insert a '+w+'\n')
-        userinput.append(str(user))
+        if w in Trigger:
+                user = str(input('insert a'+w+' !'))
+                data = data.replace (w,user)
 
-for word in data():
-    if (word in Trigger):
-        word = word.replace()
-
-print(userinput)
-
+#write data to file
+file = open('teste.txt','w')
+file = file.write(data) 
+print(file)    

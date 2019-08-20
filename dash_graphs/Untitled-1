@@ -1,0 +1,48 @@
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+
+app = dash.Dash()
+
+app.layout = html.Div(children=[html.H1(children='Apuramento Eletric. 2018-2019'),dcc.Graph()])
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
+
+    dcc.Graph(
+        id='test',
+        figure={
+            'data': [
+                {'x': ['jan', 'fev', 'mar', 'abr', 'maio'], 'y': [
+                    4836, 3262, 3669, 3911, 4734], 'type': 'bar', 'name': 'meses'},
+                ],
+            'layout': {
+                'title': 'Apuramento eletricidade 2018'
+            }
+        }
+    )
+
+
+ 4836   
+ 5366   
+ 3262   
+ 4136   
+ 3669   
+ 3915   
+ 3911   
+ 3683   
+ 4734   
+ 4667   
+ 4356   
+ 4476   
+ 5397   
+ 0   
+ 6823   
+ 0    
+ 6328   
+ 0   
+ 6552   
+ 0   
+ 4679   
+ 0   
+ 520   

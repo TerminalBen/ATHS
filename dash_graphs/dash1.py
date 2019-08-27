@@ -92,7 +92,6 @@ app.layout = html.Div(children=[
             'data': [go.Pie(labels=['2017', '2018', '2019'], values=[s1, s2, s3], hole=0.3)],
             'layout': {'title': 'Comparação anual Directa'}
         }
-        figure.update_traces(textinfo='value')
     ),
 
     dcc.Graph(

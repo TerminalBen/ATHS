@@ -41,6 +41,11 @@ s14 = sum(cid2018)
 cid2019 = [1610, 1499, 1040, 1105, 1978, 1303,0,0,0,0,0,0]
 s15 = sum(cid2019)
 
+ec2017 = [3999, 3200, 3045, 3077, 2032, 2200, 2342, 3758, 4101, 3828, 3407, 3068]
+ec2018 = [3080, 2168, 2329, 2431, 2685, 2424, 2823, 2881, 1393, 3394, 2485, 2875]
+ec2019 = [3220, 2999, 2080, 2210, 3956, 2610, 0, 0, 0, 0, 0, 0]
+
+
 rib2017= [1428,1585,1081,1449,1371,1529,1519,1736,2231,1732,1693,2021]
 s16=sum(rib2017)
 rib2018 = [1151,1888,1793,1458,1508,1537,1506,1864,1837,2139,2186,1952]
@@ -107,13 +112,13 @@ app.layout = html.Div(children=[
                     'type': 'bar', 'name': u'2019'},
             ],
             'layout': {
-                'title': 'Campinho Zona Industrial'
+                'title': 'Posto Venda Campinho'
             }
         }
     ),
         html.Div([
-        html.P ('painel solar em funcionamento no dia 03 de Setembro de 2018'),
-        html.P ('Arranque de camaras Frigorificas 01 de Maio de 2018')
+        html.P ('Inicio funcionamento Painel solar em 03 de Setembro de 2018'),
+        html.P ('Arranque das camaras Frigorificas em 01 de Maio de 2018')
         ],
         style = {'textAlign':'right','margin-top':1,'font-size':12}
     ),
@@ -228,7 +233,7 @@ app.layout = html.Div(children=[
                     'type': 'bar', 'name': u'2019'},
             ],
             'layout': {
-                'title': 'Posto de venda Grosso Ribeirinha'
+                'title': 'Posto de venda Ribeirinha'
             }
         }
     ),
@@ -252,7 +257,7 @@ app.layout = html.Div(children=[
                     'type': 'bar', 'name': u'2019'},
             ],
             'layout': {
-                'title': 'Posto de venda Grosso Porto Novo'
+                'title': 'Posto de venda Porto Novo'
             }
         }
     ),
@@ -272,5 +277,9 @@ app.layout = html.Div(children=[
     )
 ]) 
 
+
 if __name__ == '__main__':
     app.run_server(debug=True)
+    print (ec2017)
+    print (ec2018)
+    print (ec2019)

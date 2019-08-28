@@ -73,6 +73,7 @@ app.layout = html.Div(children=[
     html.Div(children='''
         Valores em Kilowatts
     '''),
+    
 
     dcc.Graph(
         id='MS',
@@ -85,9 +86,10 @@ app.layout = html.Div(children=[
                 {'x': year, 'y': ms2019,
                     'type': 'bar', 'name': u'2019'},
             ],
-            'layout': {
-                'title': 'Monte Sossego Rua 1'
-            }
+            'layout': go.Layout( 
+                title='Monte Sossego Rua 1',
+                yaxis={'title': 'Valores em Kw'},
+            )
         }
     ),
 
@@ -111,18 +113,22 @@ app.layout = html.Div(children=[
                 {'x': year, 'y': camp2019,
                     'type': 'bar', 'name': u'2019'},
             ],
-            'layout': {
-                'title': 'Consumo Eletricidade Campinho'
-            }
+            'layout': go.Layout (
+                title='Consumo Eletricidade Campinho',
+                yaxis={'title':'Valores em Kw (x1000)'}
+            )
         }
     ),
 
+    
+    #html.Div([
+     #   html.P ('Valores em Kilowats')
+      #  ],
+       # style = {'textAlign':'left','margin-top':0,'font-size':11}
+    #),
+    
+
     html.Div([
-        html.P ('Valores em Kilowats')
-        ],
-        style = {'textAlign':'left','margin-top':0,'font-size':11}
-    ),
-        html.Div([
         html.P ('Inicio funcionamento Painel solar em 03 de Setembro de 2018'),
         html.P ('Arranque das camaras Frigorificas em 01 de Maio de 2018')
         ],
@@ -148,15 +154,15 @@ app.layout = html.Div(children=[
                 {'x': year, 'y': sj2019,
                     'type': 'bar', 'name': u'2019'},
             ],
-            'layout': {
-                'title': 'Minimercado Rua Sao João'
-            }
+            'layout': go.Layout( 
+                title='Minimercado Rua São João',
+                yaxis={'title': 'Valores em Kw'},
+            )
         }
     ),
     
     html.Div([
     html.P ('Colocação painel solar  26 de Agosto de 2018'),
-    html.P ('Valores em Kilowats')
     ],
     style = {'textAlign':'right','margin-top':1,'font-size':11}),
 
@@ -179,16 +185,16 @@ app.layout = html.Div(children=[
                 {'x': year, 'y': escr2019,
                     'type': 'bar', 'name': u'2019'},
             ],
-            'layout': {
-                'title': 'Escritorio Rua do Coco'
-
-            }
+            'layout': go.Layout( 
+                title='Escritorio Rua do Coco',
+                yaxis={'title': 'Valores em Kw'},
+            )
         }
     ),
 
     html.Div([
         html.P ('Junção com cidade dia 14 de julho de 2018'),
-        html.P ('Valores em Kilowats')
+        #html.P ('Valores em Kilowats')
         ],
         style = {'textAlign':'right','margin-top':1,'font-size':11}
     ),
@@ -213,14 +219,14 @@ app.layout = html.Div(children=[
                 {'x': year, 'y': cid2019,
                     'type': 'bar', 'name': u'2019'},
             ],
-            'layout': {
-                'title': 'Posto de venda Rua do Coco'
-            }
+            'layout': go.Layout( 
+                title='Posto de venda Rua do Coco',
+                yaxis={'title': 'Valores em Kw'},
+            )
         }
     ),
         html.Div([
-        html.P ('Junção com cidade dia 14 de julho de 2018'),
-        html.P ('Valores em Kilowats')
+        html.P ('Junção com cidade dia 14 de julho de 2018')
         ],
         style = {'textAlign':'right','margin-top':1,'font-size':11}
     ),
@@ -236,18 +242,19 @@ app.layout = html.Div(children=[
                 {'x': year, 'y': ec2019,
                     'type': 'bar', 'name': u'2019'},
             ],
-            'layout': {
-                'title': 'Consumo eletricidade Posto de Venda/Escritório'
-            }
+            'layout': go.Layout (
+                title='Cosumo eletricidade Posto de Venda/Escritório',
+                yaxis={'title':'Valores em Kw'}
+            )
         }
     ),
 
 
-    html.Div([
-        html.P ('Valores em Kilowats')
-        ],
-        style = {'textAlign':'left','margin-top':1,'font-size':11}
-    ),
+    #html.Div([
+    #    html.P ('Valores em Kilowats')
+    #    ],
+    #    style = {'textAlign':'left','margin-top':1,'font-size':11}
+    #),
 
     html.Div([
         html.P ('Paineis Solares em funcionamento a partir de 31 de Março de 2017'),

@@ -1,2 +1,6 @@
-
-22:Nov(Terminal)
+/.idea/
+*.vscode
+/__pycache__/
+*.txt
+settings.json
+*.DS_STORE

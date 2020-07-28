@@ -1,4 +1,4 @@
-Trigger  = ['NOUN','ADJECTIVE','VERB']
+Trigger  = ['noun','adjective','verb']
 
 
 #read file
